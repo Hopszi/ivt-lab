@@ -1,4 +1,4 @@
-# IVT(a bit of change for branch-A) Spaceship
+# IVT(a bit of change resolved by master) Spaceship
 
 This is a sample application for the [Integration and Verification Techniques](http://www.mit.bme.hu/oktatas/targyak/vimiac04) course at BME MIT.
 
