@@ -90,7 +90,8 @@ if (! primaryTorpedoStore.isEmpty()) {
 }        
 break;
     }
-
+	  case default:
+	 	break;
     return firingSuccess;
   }
 
