@@ -207,7 +207,7 @@ public class GT4500Test {
 
     // Assert
     verify(mockpTS, times(2)).isEmpty();
-    verify(mockpTS, times(2)).fire(1);
+    verify(mockpTS, times(1)).fire(1);
     
     verify(mocksTS, times(1)).isEmpty();
     assertEquals(true, result);
