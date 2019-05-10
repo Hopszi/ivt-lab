@@ -70,5 +70,30 @@ public class GT4500Test {
     verify(mocksTS, times(1)).fire(1);
     assertEquals(false, result);
   }
+  
+  @Test
+  public void fireTorpedo_Single_isEmpty_True(){
+    // Arrange
+    when(mockpTS.isEmpty()).thenReturn(true);
+    // Act
+    boolean result = ship.fireTorpedo(FiringMode.SINGLE);
+
+    // Assert
+    verify(mockpTS, times(1)).isEmpty();
+    assertEquals(true, result);
+  }
+  
+  
+  @Test
+  public void fireTorpedo_Single_isEmpty_False(){
+    // Arrange
+    when(mockpTS.isEmpty()).thenReturn(true);
+    // Act
+    boolean result = ship.fireTorpedo(FiringMode.SINGLE);
+
+    // Assert
+    verify(mockpTS, times(1)).isEmpty();
+    assertEquals(false, result);
+  }
 
 }
