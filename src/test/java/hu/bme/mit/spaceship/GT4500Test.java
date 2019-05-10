@@ -98,5 +98,16 @@ public class GT4500Test {
     verify(mockpTS, times(1)).isEmpty();
     assertEquals(true, result);
   }
+  
+  @Test
+  public void fireLaser_Single_Failure(){
+    // Arrange
+    //testing Lasers, no need to mock
+    
+    // Act
+    boolean result = ship.fireLaser(FiringMode.SINGLE);
 
+    // Assert    
+    assertEquals(false, result);
+  }
 }
