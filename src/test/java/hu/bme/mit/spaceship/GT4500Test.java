@@ -28,7 +28,7 @@ public class GT4500Test {
 
     // Assert
     verify(mockpTS, times(1)).fire(1);
-    assert(result, true);
+    assertEquals(true, result);
   }
   
   @Test
@@ -40,7 +40,7 @@ public class GT4500Test {
 
     // Assert
     verify(mockpTS, times(1)).fire(1);
-    assert(result, false);
+    assertEquals(false, result);
   }
 
   @Test
@@ -54,7 +54,7 @@ public class GT4500Test {
     // Assert
     verify(mockpTS, times(1)).fire(1);
     verify(mocksTS, times(1)).fire(1);
-    assert(result, true);
+    assertEquals(true, result);
   }
   
   @Test
@@ -68,7 +68,7 @@ public class GT4500Test {
     // Assert
     verify(mockpTS, times(1)).fire(1);
     verify(mocksTS, times(1)).fire(1);
-    assert(result, false);
+    assertEquals(false, result);
   }
 
 }
