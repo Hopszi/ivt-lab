@@ -18,7 +18,17 @@ public class GT4500Test {
     mocksTS = mock(TorpedoStore.class);
     this.ship = new GT4500(mockpTS, mocksTS);
   }
+  @Test
+  public void fireTorpedo_NULL_Failure(){
+    // Arrange
+    when(mockpTS.fire(1)).thenReturn(true);
+    // Act
+    boolean result = ship.fireTorpedo();
 
+    // Assert
+    assertEquals(false, result);
+  }
+  
   @Test
   public void fireTorpedo_Single_Success(){
     // Arrange
