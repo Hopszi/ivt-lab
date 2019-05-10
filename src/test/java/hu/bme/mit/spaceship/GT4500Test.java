@@ -7,11 +7,13 @@ import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.*;
 
 public class GT4500Test {
-
+  
+  private DataAccess mockDA;
   private GT4500 ship;
 
   @BeforeEach
   public void init(){
+    mockDA = mock(DataAccess.class);
     this.ship = new GT4500();
   }
 
