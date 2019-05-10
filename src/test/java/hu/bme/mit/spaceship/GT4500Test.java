@@ -88,7 +88,8 @@ public class GT4500Test {
   
   @Test
   public void fireTorpedo_Single_isEmpty_False(){
-    // Arrange
+    // Arrange    
+    when(mockpTS.fire(1)).thenReturn(true);
     when(mockpTS.isEmpty()).thenReturn(false);
     // Act
     boolean result = ship.fireTorpedo(FiringMode.SINGLE);
