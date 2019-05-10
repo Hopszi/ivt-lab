@@ -28,6 +28,19 @@ public class GT4500Test {
 
     // Assert
     verify(mockpTS, times(1)).fire(1);
+    assert(result, true);
+  }
+  
+  @Test
+  public void fireTorpedo_Single_Failure(){
+    // Arrange
+    when(mockpTS.fire(1)).thenReturn(false);
+    // Act
+    boolean result = ship.fireTorpedo(FiringMode.SINGLE);
+
+    // Assert
+    verify(mockpTS, times(1)).fire(1);
+    assert(result, false);
   }
 
   @Test
@@ -41,6 +54,21 @@ public class GT4500Test {
     // Assert
     verify(mockpTS, times(1)).fire(1);
     verify(mocksTS, times(1)).fire(1);
+    assert(result, true);
+  }
+  
+  @Test
+  public void fireTorpedo_All_Failure(){
+    // Arrange
+    when(mockpTS.fire(1)).thenReturn(false);
+    when(mocksTS.fire(1)).thenReturn(false);
+    // Act
+    boolean result = ship.fireTorpedo(FiringMode.ALL);
+
+    // Assert
+    verify(mockpTS, times(1)).fire(1);
+    verify(mocksTS, times(1)).fire(1);
+    assert(result, false);
   }
 
 }
