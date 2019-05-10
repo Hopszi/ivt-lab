@@ -167,11 +167,10 @@ public class GT4500Test {
     boolean result = ship.fireTorpedo(FiringMode.SINGLE);
 
     // Assert
-    verify(mockpTS, times(1)).isEmpty();
+    verify(mockpTS, times(2)).isEmpty();
     verify(mockpTS, times(2)).fire(1);
     
     verify(mocksTS, times(1)).isEmpty();
-    verify(mocksTS, times(1)).fire(1);
     assertEquals(true, result);
   }
 }
