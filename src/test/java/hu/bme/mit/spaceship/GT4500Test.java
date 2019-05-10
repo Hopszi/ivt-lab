@@ -23,7 +23,7 @@ public class GT4500Test {
     // Arrange
     when(mockpTS.fire(1)).thenReturn(true);
     // Act
-    boolean result = ship.fireTorpedo();
+    boolean result = ship.fireTorpedo(FiringMode.NONE);
 
     // Assert
     assertEquals(false, result);
